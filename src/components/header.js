@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import Header from './Header.css'
+import './Header.css'
 
 class Header extends React.Component {
   constructor(props) {
@@ -27,7 +27,7 @@ handleScroll = (event) => {
 
   render() {
     return (
-      <div className={this.state.hasScrolled ? 
+      <div className={this.state.hasScrolled ?
       'Header HeaderScrolled' : 'Header'}>
        <div className="HeaderGroup">
        <Link to="/"><img src={require('../images/logo-alpha.png')} width="50"/></Link>
