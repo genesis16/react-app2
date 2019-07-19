@@ -108,6 +108,11 @@ justify-items: center;
     grid-template-columns: repeat(3, 1fr);
   }
 }
+.Card {
+  background-color: rgb(5, 57, 134);
+  z-index: 1;
+
+}
 .Cards h2 {
   margin: 50px 20px;
   font-size: 60px;
