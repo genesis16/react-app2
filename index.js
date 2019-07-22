@@ -1,9 +1,11 @@
+
 import React from 'react';
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Header from '../components/header'
 import './index.css'
-import { graphql, StaticQuery } from "gatsby";
+import { graphql, StaticQuery } from "gatsby"
+import Footer from '../components/Footer';
 
 
 export const query = graphql`
@@ -41,10 +43,10 @@ const Layout = ({ children }) => (
           />
           <Header/>
           {children}
-          {data.allContentfulLink.edges.map(edge => (
-            <a href={edge.node.url}>{edge.node.title}</a>
-           ))}
-          <footer   />
+          <Footer data={data}>
+            Website buils in modern javacript frameworks, optimised for speed and SEO. 
+            <a href="mailto:jane@thealphaandomega.com.au">Email Us</a>to asky anything.
+          </Footer>
         </div>
       </>
     )}
