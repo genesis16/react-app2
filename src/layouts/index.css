@@ -9,7 +9,7 @@ body {
 }
 a {
   color: #5334f5;
-  text-decoration: none; 
+  text-decoration: none;
   font-weight: 600;
 
 }
@@ -63,22 +63,39 @@ a {
   opacity: 0;
 
 }
-.Hero a {
+
+.Hero a.link {
   font-size: 17px;
   font-weight: 600;
   color: white;
   text-transform: uppercase;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  cursor: pointer;
+}
+
+.Hero a.link.hero {
   background:rgba(0,0,0,0.7);
   padding: 9px 20px;
   border: 1px solid rgba(255,255,255,0.25);
   border-radius: 20px;
-  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-.Hero a:hover {
-  background: white;
-  color: black;
 
+.Hero a.link.hero:hover {
+  background: white;
 }
+
+.Hero a.link.icon-link {
+  transition: all .2s ease-in-out;
+}
+
+.Hero a.link.icon-link:hover {
+  transform: scale(1.1);
+}
+
+.Hero a:hover {
+  color: black;
+}
+
 @media(max-width:640px) {
   .HeroGroup {
     padding: 100px 20px;

@@ -27,6 +27,7 @@ const SectionCellGroup = styled.div`
     grid-template-columns: repeat(1, 1fr);
   }
 `
+
 const IndexPage = () => (
   <Layout>
   <div>
@@ -36,7 +37,9 @@ const IndexPage = () => (
         <p>Build. Brand. Develop </p>
         <Link to="/page-2/">Watch the video</Link>
         <div className="Logos">
-        <img src={require("../images/logo-sketch.png")} width="50" a href = "https://www.sketch.com/" />
+          <a className="link icon-link" href="https://sketch.com">
+            <img src={require("../images/logo-sketch.png")} width="50" />
+          </a>
           <img src={require("../images/logo-figma.png")} width="50" />
           <img src={require("../images/logo-framer.png")} width="50" />
           <img src={require("../images/logo-react.png")} width="50" />
