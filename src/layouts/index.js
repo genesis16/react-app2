@@ -1,20 +1,32 @@
+
 import React from 'react';
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Header from '../components/header'
 import './index.css'
-import { graphql, StaticQuery } from "gatsby";
+import { graphql, StaticQuery } from "gatsby"
+import Footer from '../components/Footer';
 
 
 export const query = graphql`
-query {
+query SiteTitleQuery {
 site {
-siteMetadata {
-title
+   siteMetadata {
+     title
+       description
+       keywords 
+    }
+  }
+  allContentfulLink(sort: {fields: [createdAt], order: ASC }) {
+    edges {
+      node {
+        title
+        url
+      }
+    }
+  }
 }
-}
-}
-`;
+`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -31,6 +43,11 @@ const Layout = ({ children }) => (
           />
           <Header/>
           {children}
+          <Footer data={data}>
+            Websites built in modern javacript frameworks, optimised for speed and SEO.<br/>
+            <a href="mailto:jane@thealphaandomega.com.au">Email Us&nbsp;
+            </a>to ask anything.
+          </Footer>
         </div>
       </>
     )}

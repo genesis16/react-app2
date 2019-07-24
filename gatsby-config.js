@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
 	title: 'Alpha + Omega digital',
 	description: 'Melbourne web and wordpress developer',
-	keywords: 'Melbourne web developer, front end developer, digital marketer, social media marketer, gatsby js developer, Melbourne wordpress developer'
+	keywords: 'Melbourne web developer, front end developer, digital marketer, social media marketer, gatsby js developer, Melbourne wordpress developer',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

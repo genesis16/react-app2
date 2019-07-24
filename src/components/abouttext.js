@@ -1,0 +1,10 @@
+import React from 'react'
+import Link from 'gatsby-link'
+import Card from '../components/Card'
+import Section from '../components/Section'
+import Wave from '../components/Wave'
+import staticdata from '../../staticdata.json'
+import Cell from '../components/Cell'
+import styled from 'styled-components'
+import Layout from '../layouts'
+
