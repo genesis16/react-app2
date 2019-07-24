@@ -50,6 +50,7 @@ const IndexPage = () => (
       <h2>See all Projects</h2>
       <div className="CardGroup">
         <Card
+          url="https://google.com/"
           title="In and Out Fitness"
           text="12 sections"
           image={require('../images/Topography4.png')}
@@ -76,6 +77,7 @@ const IndexPage = () => (
   <SectionCellGroup>
   {staticdata.cells.map(cell => (
   <Cell
+      url="https://google.com/"
      title={cell.title}
      image={cell.image} />
       ))}
