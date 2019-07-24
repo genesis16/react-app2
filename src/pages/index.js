@@ -35,7 +35,7 @@ const IndexPage = () => (
    <div className="HeroGroup">
         <h1>Alpha + Omega digital </h1>
         <p>Build. Brand. Develop </p>
-        <Link to="/page-2/">Watch the video</Link>
+        <Link className="link hero" to="/page-2/">Watch the video</Link>
         <div className="Logos">
           <a className="link icon-link" href="https://sketch.com">
             <img src={require("../images/logo-sketch.png")} width="50" />

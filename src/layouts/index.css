@@ -64,7 +64,7 @@ a {
 
 }
 
-.Hero a.link {
+.Hero .link {
   font-size: 17px;
   font-weight: 600;
   color: white;
@@ -73,22 +73,22 @@ a {
   cursor: pointer;
 }
 
-.Hero a.link.hero {
+.Hero .link.hero {
   background:rgba(0,0,0,0.7);
   padding: 9px 20px;
   border: 1px solid rgba(255,255,255,0.25);
   border-radius: 20px;
 }
 
-.Hero a.link.hero:hover {
+.Hero .link.hero:hover {
   background: white;
 }
 
-.Hero a.link.icon-link {
+.Hero .link.icon-link {
   transition: all .2s ease-in-out;
 }
 
-.Hero a.link.icon-link:hover {
+.Hero .link.icon-link:hover {
   transform: scale(1.1);
 }
 
