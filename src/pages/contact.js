@@ -30,14 +30,18 @@ const SectionCellGroup = styled.div`
 `
 export default class Contact extends PureComponent {
   state = {
-    email: ''
+    email: '',
+    message: '',
+    name: ''
   };
 
   onSubmit = async e => {
     e.preventDefault();
 
+    const { email, name, message } = this.state;
+
     try {
-      const data = await addToMailchimp(this.state.email);
+      const data = await addToMailchimp(email, { name, message });
       alert(data.msg)
     } catch (error) {
       console.log(error);
@@ -46,8 +50,9 @@ export default class Contact extends PureComponent {
   };
 
   onChange = e => {
+    const { name, value } = e.target;
     this.setState({
-      email: e.target.value
+      [name]: value
     })
   };
 
@@ -70,7 +75,13 @@ export default class Contact extends PureComponent {
 
               <form onSubmit={this.onSubmit}>
                 <label htmlFor="email">Email</label>
-                <input type="email" value={this.state.email} onChange={this.onChange} />
+                <input name="email" type="email" value={this.state.email} onChange={this.onChange} />
+
+                <label htmlFor="name">Name</label>
+                <input name="name" type="text" value={this.state.name} onChange={this.onChange} />
+
+                <label htmlFor="message">Message</label>
+                <textarea name="message" value={this.state.message} onChange={this.onChange} />
 
                 <input type="submit" value="Submit"/>
               </form>
