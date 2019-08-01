@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const FooterGroup = styled.div`
-    background: #F1F3F5;
+    background: #Fff;
     padding: 50px 0;
     display: grid;
     grid-gap: 20px;
@@ -53,8 +53,8 @@ const Copyright = styled.div`
 
 const Footer = ({data, children}) => (
     <FooterGroup>
-      <Text>Build and brand your business online with a modern, fast website nuilt in the latest javascript
-      frameworks. Contact me @JaneJames</Text>
+      <Text>Build and brand your business online with a modern, fast website built in the latest javascript
+      frameworks.</Text>
       <Button>Tweet</Button>
       <LinkGroup>{data.allContentfulLink.edges.map(edge => (
         <a href={edge.node.url}>{edge.node.title}</a>

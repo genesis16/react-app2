@@ -3,8 +3,6 @@ import addToMailchimp from 'gatsby-plugin-mailchimp'
 import Link from 'gatsby-link'
 import Section from '../components/Section'
 import Wave from '../components/Wave'
-import staticdata from '../../staticdata.json'
-import Cell from '../components/Cell'
 import styled from 'styled-components'
 import Layout from '../layouts'
 
@@ -15,25 +13,42 @@ display: flex;
 justify-content: center;
 
 `
-const SectionCaption = styled.p`
-  font-weight: 600;
-  font-size: 18px;
-  text-transform: uppercase;
-  color: #94A4BA;
-  text-align: center;
+const Email = styled.div`
+display: flex;
+justify-content: center;
+font-weight: bold;
+margin: 0 auto;
+font-size: 2rem;
+input {
+  padding-left: 70px;
+}
+
+`
+const SubmitButton = styled.button`
+    background: linear-gradient(102.24deg, #9B51E0 0%, #3436E7 100%);
+    box-shadow: 0px 10px 20px rgba(101, 41, 255, 0.15);
+    border-radius: 30px;
+    margin-top: 30px;
+    color: white;
+    border: none;
+    padding: 16px 60px;
+    font-weight: 600;
+    font-size: 24px;
+    justify-self: center;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    &:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0, 0.15);
+        transform: translateY(-3px);
+    }
+
+`
+const EnterMail = styled.div`
+display: flex;
+justify-content: center;
+margin: 0 auto;
+
 `
 
-const SectionCellGroup = styled.div`
-  max-width: 800px;
-  margin: 0 auto 100px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 20px;
-  padding: 0 20px;
-  @media (max-width: 800px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-`
 export default class Contact extends PureComponent {
   state = {
     email: ''
@@ -89,23 +104,26 @@ export default class Contact extends PureComponent {
            </div>
          </div>
             <ContactForm>{this.props.title}
-            <h2>Contact me</h2>
+            <h2>Contact me</h2></ContactForm>
+            <Email>
               <form onSubmit={this.onSubmit}>
-                <label htmlFor="email">Email</label>
+              <EnterMail>
+                <label htmlFor="email">Email</label></EnterMail>
+                <div className="entername">
                 <input type="email" value={this.state.email} onChange={this.onChange} />
-                <input type="submit" value="Submit"/>
-              </form>
-              </ContactForm>
-
-    
-
+                <div></div>
+                <SubmitButton>Submit</SubmitButton>
+              
+                </div>
+      </form>
+    </Email>
           
-        <Section
-          image={require('../images/rain.jpg')}
-          logo={require('../images/logo-react.png')}
-          title="React for Designers"
-          text="Learn how to build a modern site using React and the most efficient libraries to get your site/product online. Get familiar with components, Grid CSS, animations, interactions, dynamic data with Contentful and deploying your site with Netlify."
-        />
+    <Section
+     image= {require('../images/rain.jpg')}
+     logo= {require('../images/logo-react.png')}
+      title="Build your dream website"
+      text="Transform your website into a feature rich, lightening fast, SEO optimised site that will improve your page loading speed, decrease your bounce rate, and convert more clients. "
+     />
      </div>
     </Layout>
   }
