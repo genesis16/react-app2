@@ -11,18 +11,21 @@ const ContactForm = styled.div`
 font-size: 2rem;
 display: flex;
 justify-content: center;
-
 `
 const Email = styled.div`
 display: flex;
 justify-content: center;
 font-weight: bold;
-margin: 0 auto;
 font-size: 2rem;
+border-box: 5px solid black;
 input {
   padding-left: 70px;
+  padding-bottom: 20px;
 }
-
+label{
+  padding-bottom: 20px;
+  margin: 60px;
+}
 `
 const SubmitButton = styled.button`
     background: linear-gradient(102.24deg, #9B51E0 0%, #3436E7 100%);
@@ -40,13 +43,6 @@ const SubmitButton = styled.button`
         box-shadow: 0 20px 40px rgba(0,0,0, 0.15);
         transform: translateY(-3px);
     }
-
-`
-const EnterMail = styled.div`
-display: flex;
-justify-content: center;
-margin: 0 auto;
-
 `
 
 export default class Contact extends PureComponent {
@@ -107,17 +103,22 @@ export default class Contact extends PureComponent {
             <h2>Contact me</h2></ContactForm>
             <Email>
               <form onSubmit={this.onSubmit}>
-              <EnterMail>
-                <label htmlFor="email">Email</label></EnterMail>
-                <div className="entername">
-                <input type="email" value={this.state.email} onChange={this.onChange} />
-                <div></div>
-                <SubmitButton>Submit</SubmitButton>
-              
-                </div>
-      </form>
-    </Email>
+              <label htmlFor="name">Name</label>
+              <div></div>
+                <input name="name" type="text" value={this.state.name} onChange={this.onChange} />
+                <div>
+               </div>
           
+                <label htmlFor="email">Email</label>
+                <div></div>
+                <input type="email" value={this.state.email} onChange={this.onChange} />
+                <div>
+                </div>
+
+                
+                <SubmitButton>Submit</SubmitButton>
+      </form>
+    </Email>    
     <Section
      image= {require('../images/rain.jpg')}
      logo= {require('../images/logo-react.png')}
