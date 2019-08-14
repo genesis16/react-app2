@@ -1,7 +1,7 @@
 .Header {
     position: fixed;
     width: 100%;
-    padding: 50px 0;
+    padding: 40px 0;
     z-index: 100;
     transition: 0.8s cubic-bezier(0.8, 0.2, 0.2, 1)
 }
@@ -13,11 +13,10 @@
 .HeaderGroup {
     max-width: 800px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(5,auto);
+    display: flex;
     align-items: center;
-    justify-items: center;
-} 
+    justify-content: space-around;
+}
 
 
 .Header a {
@@ -25,17 +24,16 @@
     font-weight: 700;
     transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
     text-shadow: black 1px 0 15px;
+    padding: 8px 20px;
 }
 .Header a:hover {
     background: rgba(0,0,0,0.5);
     text-shadow: none;
     color: white;
-    padding: 8px 20px;
     opacity: 50%;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.25);
-    transform: translateY(-3px);
-
+    transform: scale(1.05);
 
 }
 
