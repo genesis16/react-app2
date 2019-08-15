@@ -35,7 +35,6 @@ handleScroll = (event) => {
        <Link to="/projects">projects</Link>
        <Link to="/services">Services</Link>
        <Link to="/contact">Contact</Link>
-       <Link to="/blog">Blog</Link>
    </div>
 </div>
      )
